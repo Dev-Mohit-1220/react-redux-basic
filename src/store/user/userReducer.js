@@ -1,7 +1,7 @@
 import { GET_USERS } from "./userActionTypes";
 
 const initialState = {
-  value: {},
+  list: [],
 };
 
 const UserReducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ const UserReducer = (state = initialState, action) => {
     case GET_USERS:
       return {
         ...state,
-        value: action.payload,
+        list: action.payload,
       };
     default: 
     return state;
